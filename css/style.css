@@ -15,7 +15,6 @@
   background-size: cover;
 }
 
-/* Fælles styling for fisk */
 .bg img {
   position: absolute;
   max-width: 200px;
@@ -29,6 +28,7 @@
   max-width: 300px;
   animation: zigzag 17s linear infinite;
 }
+
 #redfish2 {
   z-index: auto;
   bottom: 140px;
@@ -36,11 +36,13 @@
   max-width: 320px;
   animation: swim 11s linear infinite;
 }
+
 .bluefish {
   max-width: 200px;
   position: relative;
   z-index: 1;
 }
+
 .orangefish {
   z-index: auto;
   bottom: 70px;
@@ -63,6 +65,7 @@
   right: -200px;
   animation: arcLeftMotion 16s linear infinite;
 }
+
 #codfish2 {
   bottom: 63px;
   right: -170px;
@@ -85,7 +88,8 @@
   bottom: 43px;
   right: -38px;
   animation: arcLeftMotion 23s linear infinite;
-} 
+}
+
 #tropicalfish1 {
   bottom: 230px;
   right: -200px;
@@ -108,7 +112,8 @@
   width: 100px;
   height: 94px;
   animation: arcLeftMotion 20s linear infinite;
-} 
+}
+
 .small-clam {
   z-index: auto;
   bottom: 20px;
@@ -136,6 +141,7 @@
   width: 140px;
   height: 300px;
 }
+
 .anchor {
   z-index: auto;
   bottom: 1px;
@@ -143,6 +149,7 @@
   width: 120px;
   height: 165px;
 }
+
 #anchor-tooltip {
   position: absolute;
   background-color: #222;
@@ -155,6 +162,7 @@
   pointer-events: none;
   z-index: 100;
 }
+
 #tooltip {
   position: absolute;
   background: rgba(255, 255, 255, 0.8);
@@ -169,7 +177,29 @@
   line-height: 1.4;
 }
 
-/* ANIMATIONER */
+.yellowfish {
+  position: absolute;
+  bottom: 120px;
+  left: -150px;
+  width: 90px;
+  animation: bubbleMotion 18s ease-in-out infinite;
+}
+
+.greenfish {
+  position: absolute;
+  top: 60px;
+  right: -200px;
+  width: 100px;
+  animation: driftLeft 25s linear infinite;
+}
+
+.glowfish {
+  position: absolute;
+  bottom: 250px;
+  left: 300px;
+  width: 110px;
+  animation: glowSwim 5s ease-in-out infinite;
+}
 
 @keyframes zigzag {
   0%   { transform: translate(0, 0) scaleX(1); }
@@ -197,6 +227,7 @@
 .spin-grow {
   animation: spinGrow 1s ease;
 }
+
 @keyframes swim {
   0% {
     transform: translate(0px, 0px);
@@ -218,6 +249,22 @@
   }
 }
 
+@keyframes bubbleMotion {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(100px, -80px); }
+  50%  { transform: translate(200px, -160px); }
+  75%  { transform: translate(300px, -80px); }
+  100% { transform: translate(400px, 0); }
+}
 
+@keyframes driftLeft {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-1500px); }
+  100% { transform: translateX(-3000px); }
+}
 
-
+@keyframes glowSwim {
+  0%   { transform: translateY(0) scale(1); opacity: 1; }
+  50%  { transform: translateY(-100px) scale(1.2); opacity: 0.8; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
