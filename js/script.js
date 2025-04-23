@@ -19,4 +19,12 @@ anchor.addEventListener("mouseenter", () => {
   anchor.addEventListener("mouseleave", () => {
     anchorTooltip.style.opacity = "0";
   });
+  anchor.addEventListener("click", () => {
+    audio.muted = false;
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  });
   });
